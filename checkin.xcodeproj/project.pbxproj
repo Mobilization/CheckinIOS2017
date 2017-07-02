@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		4A5DCB151009F80558D0A742 /* Pods_checkinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC396D8DE33454B801355F8 /* Pods_checkinTests.framework */; };
 		51D2DF76A07950B38BE35F42 /* Pods_checkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D834DB093CE6A1565AAB233 /* Pods_checkin.framework */; };
+		74263FC51F078EBE00915116 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74263FC41F078EBE00915116 /* MyTableViewController.swift */; };
 		744A5A961F03C0AB009EB719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A5A951F03C0AB009EB719 /* AppDelegate.swift */; };
-		744A5A981F03C0AB009EB719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A5A971F03C0AB009EB719 /* ViewController.swift */; };
 		744A5A9B1F03C0AB009EB719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744A5A991F03C0AB009EB719 /* Main.storyboard */; };
 		744A5A9D1F03C0AB009EB719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 744A5A9C1F03C0AB009EB719 /* Assets.xcassets */; };
 		744A5AA01F03C0AB009EB719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744A5A9E1F03C0AB009EB719 /* LaunchScreen.storyboard */; };
 		744A5AAB1F03C0AB009EB719 /* checkinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A5AAA1F03C0AB009EB719 /* checkinTests.swift */; };
 		744A5AB61F03C136009EB719 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 744A5AB51F03C136009EB719 /* GoogleService-Info.plist */; };
+		74DBB8B71F06521800B90C61 /* MyTableUIViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DBB8B61F06521800B90C61 /* MyTableUIViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,9 +31,9 @@
 
 /* Begin PBXFileReference section */
 		5D834DB093CE6A1565AAB233 /* Pods_checkin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_checkin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74263FC41F078EBE00915116 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		744A5A921F03C0AB009EB719 /* checkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = checkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		744A5A951F03C0AB009EB719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		744A5A971F03C0AB009EB719 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		744A5A9A1F03C0AB009EB719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		744A5A9C1F03C0AB009EB719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		744A5A9F1F03C0AB009EB719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		744A5AAA1F03C0AB009EB719 /* checkinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkinTests.swift; sourceTree = "<group>"; };
 		744A5AAC1F03C0AB009EB719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		744A5AB51F03C136009EB719 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74DBB8B61F06521800B90C61 /* MyTableUIViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableUIViewCell.swift; sourceTree = "<group>"; };
 		77B6E8681978EB2A2F1A3E4D /* Pods-checkin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-checkin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-checkin/Pods-checkin.debug.xcconfig"; sourceTree = "<group>"; };
 		827561618434645675645989 /* Pods-checkinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-checkinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-checkinTests/Pods-checkinTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8660A36FF5152687D5490B12 /* Pods-checkinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-checkinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-checkinTests/Pods-checkinTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,8 +95,9 @@
 			children = (
 				744A5AB51F03C136009EB719 /* GoogleService-Info.plist */,
 				744A5A951F03C0AB009EB719 /* AppDelegate.swift */,
-				744A5A971F03C0AB009EB719 /* ViewController.swift */,
 				744A5A991F03C0AB009EB719 /* Main.storyboard */,
+				74263FC41F078EBE00915116 /* MyTableViewController.swift */,
+				74DBB8B61F06521800B90C61 /* MyTableUIViewCell.swift */,
 				744A5A9C1F03C0AB009EB719 /* Assets.xcassets */,
 				744A5A9E1F03C0AB009EB719 /* LaunchScreen.storyboard */,
 				744A5AA11F03C0AB009EB719 /* Info.plist */,
@@ -334,8 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744A5A981F03C0AB009EB719 /* ViewController.swift in Sources */,
+				74DBB8B71F06521800B90C61 /* MyTableUIViewCell.swift in Sources */,
 				744A5A961F03C0AB009EB719 /* AppDelegate.swift in Sources */,
+				74263FC51F078EBE00915116 /* MyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +551,7 @@
 				744A5AB11F03C0AB009EB719 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		744A5AB21F03C0AB009EB719 /* Build configuration list for PBXNativeTarget "checkinTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +560,7 @@
 				744A5AB41F03C0AB009EB719 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

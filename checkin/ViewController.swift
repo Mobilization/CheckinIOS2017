@@ -16,15 +16,23 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     private var filterText: String?
     @IBAction func searchChangedEdit(_ sender: UITextField){
         filterText = sender.text
-        self.userFilteredList = self.userList.filter {$0.contains(filterText ?? "")}
+        self.userFilteredList = self.userList.filter {$0.name.contains(filterText ?? "")}
         self.userTableView.reloadData()
     }
     @IBOutlet weak var searchTextField: UITextField!
     
+    class User {
+        
+
+        var name : String = ""
+        var email : String = ""
+        var checkin : Bool = false
+        
+    }
     
     
-    var userList: [String] = []
-    var userFilteredList: [String] = []
+    var userList: [User] = []
+    var userFilteredList: [User] = []
     var ref : DatabaseReference?
     var handle : DatabaseHandle?
     
@@ -33,35 +41,27 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = userFilteredList[indexPath.row]
-        return cell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "mycell")
+                                        
+        if (cell == nil){
+            cell = MyTableUIViewCell(style: .default, reuseIdentifier: "mycell")
+        }
+        let user = userFilteredList[indexPath.row]
+        if let myCell = cell as? MyTableUIViewCell {
+            myCell.name?.text = user.name
+            myCell.email?.text = user.email
+            myCell.mycheckin?.isOn = user.checkin
+        }
+        return cell!
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        ref = Database.database().reference();
-        let childRef =  ref?.child("/");
         
-        handle = childRef?.observe(.value, with: { (snapshot) in
-            print("children \(snapshot.childrenCount)")
-            let enumerator = snapshot.children
-            self.userList.removeAll()
-            while let rest = enumerator.nextObject() as? DataSnapshot {
-                guard let restDict = rest.value as? [String: Any] else { continue }
-                let name = restDict["first"] as? String
-                let last = restDict["last"] as? String
-                let email = restDict["email"] as? String
-                let itemDisplay = name?.appending(" ").appending(last!).appending(" ").appending(email!);
-                self.userList.append(itemDisplay!)
-                
-                
-            }
-            self.userFilteredList = self.userList.filter { $0 is String }
-            self.userTableView.reloadData()
-            
-        })
+//        self.userTableView.register(MyTableUIViewCell.self as AnyClass, forCellReuseIdentifier: "mycell")
+//        self.userTableView.register(UINib(nibName: "MyTableUIViewCell", bundle: nil), forCellReuseIdentifier: "mycell")
+        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
   
